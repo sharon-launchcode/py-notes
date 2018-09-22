@@ -1,1 +1,4 @@
 #### https://matplotlib.org/faq/osx_framework.html
+
+#### NOTES
+``` On OSX, two different types of Python builds exist: a regular build and a framework build. In order to interact correctly with OSX through the native GUI frameworks, you need a framework build of Python. At the time of writing the macosx and WXAgg backends require a framework build to function correctly. This can result in issues for a Python installation not build as a framework and may also happen in virtual envs and when using (Ana)conda. From Matplotlib 1.5 onwards, both backends check that a framework build is available and fail if a non framework build is found. (Without this check a partially functional figure is created. In particular, it is produced in the background and cannot be put in front of any other window.)```
